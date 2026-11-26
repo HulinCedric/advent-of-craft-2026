@@ -15,6 +15,14 @@ public class FindTheControlCenterTests
     [Fact]
     public void A_signal_sent_When_reaches_Alberon() =>
         Assert.Equal("Alberon", Town.Send(When).SignedBy);
+    
+    [Fact]
+    public void Find_when_the_signal_reaches_Alberon()
+    {
+        for(var i = 0; i < 24; i++)
+            if (Town.Send($"{i:D2}:00").SignedBy == "Alberon")
+                Assert.Fail($"Signal sent at {i:D2}:00 reached Alberon");
+    }
 
     [Fact]
     public void The_door_code_is() =>
