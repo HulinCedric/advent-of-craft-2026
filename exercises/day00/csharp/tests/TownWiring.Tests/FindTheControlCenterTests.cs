@@ -26,5 +26,5 @@ public class FindTheControlCenterTests
 
     [Fact]
     public void The_door_code_is() =>
-        Assert.Equal("???", Town.Send(When).DoorCode);
+        Assert.Equal("NUTCRACKER", Town.Send(When).DoorCode);
 }
