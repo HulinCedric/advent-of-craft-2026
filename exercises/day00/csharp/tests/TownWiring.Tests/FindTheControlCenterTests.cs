@@ -6,7 +6,7 @@ namespace TownWiring.Tests;
 //           Find when a signal from the pumps reaches my office, then read what my door says."
 public class FindTheControlCenterTests
 {
-    private const string When = "??:??";
+    private const string When = "03:00";
 
     [Fact]
     public void A_signal_sent_at_two_in_the_afternoon_lands_at_the_barn() =>
@@ -15,8 +15,16 @@ public class FindTheControlCenterTests
     [Fact]
     public void A_signal_sent_When_reaches_Alberon() =>
         Assert.Equal("Alberon", Town.Send(When).SignedBy);
+    
+    [Fact]
+    public void Find_when_the_signal_reaches_Alberon()
+    {
+        for(var i = 0; i < 24; i++)
+            if (Town.Send($"{i:D2}:00").SignedBy == "Alberon")
+                Assert.Fail($"Signal sent at {i:D2}:00 reached Alberon");
+    }
 
     [Fact]
     public void The_door_code_is() =>
-        Assert.Equal("???", Town.Send(When).DoorCode);
+        Assert.Equal("NUTCRACKER", Town.Send(When).DoorCode);
 }
