@@ -6,7 +6,7 @@ namespace TownWiring.Tests;
 //           Find when a signal from the pumps reaches my office, then read what my door says."
 public class FindTheControlCenterTests
 {
-    private const string When = "??:??";
+    private const string When = "03:00";
 
     [Fact]
     public void A_signal_sent_at_two_in_the_afternoon_lands_at_the_barn() =>
