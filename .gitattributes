@@ -1,0 +1,11 @@
+# Line endings that work for every student: scripts keep the ending their shell needs, whatever the OS.
+* text=auto
+gradlew text eol=lf
+mvnw text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.jpg binary
+*.webp binary
+*.jar binary

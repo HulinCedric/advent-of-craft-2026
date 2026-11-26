@@ -1,0 +1,22 @@
+# Build artifacts
+target/
+out/
+bin/
+obj/
+build/
+.gradle/
+.kotlin/
+node_modules/
+dist/
+coverage/
+*.class
+*.received.*
+# IDEs
+.idea/
+.vscode/
+.vs/
+*.iml
+
+# Personal: your own reflections, never pushed by accident
+journey.md
+
